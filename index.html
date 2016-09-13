@@ -9,9 +9,16 @@
 <div class="row">
   <div ng-include="'partials/navbar.html'"></div>
 </div>
-<div class="row">
+<div class="row bigbox main" style="min-height:75%">
   <div ng-view ></div>
 </div>
+<div class="image-viewer col-md-12" ng-controller="masonryController">
+	<i class="fa fa-times fa-2x close" ng-click="close()"></i>
+  	<!-- <div class="next" ng-click="next()"><i class="fa fa-angle-right fa-2x"></i></div> -->
+  	<!-- <div class="prev" ng-click="prev()"><i class="fa fa-angle-left fa-2x"></i></div> -->
+  	<!--img-->
+  	<!--desc-->
+  </div>
 <div class="row">
   <div ng-include="'partials/footer.html'"></div>
 </div>

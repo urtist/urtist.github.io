@@ -1,6 +1,23 @@
 <!--gallery-->
-<div masonry ng-controller="masonryController">
-    <div class="masonry-brick" ng-repeat="brick in sbricks">
-        <img ng-src="{{ brick.src }}" alt="A masonry brick">
-    </div>
+<style>
+.arrow{
+	width:30px;
+	margin-left:10px;
+}
+h2{	
+	color:#D9FAF8;
+	font-weight:bold;	
+}
+</style>
+<div  ng-controller="masonryController">
+	<div class="row">
+		<div class="col-md-4 col-md-push-5"><h2 class="center">{{pagetitle}}<img src="images/svg/curved-arrow.svg" class="arrow"/>  </h2>
+		</div>
+	</div>
+
+	<div masonry>
+	    <div class="masonry-brick" ng-repeat="brick in sbricks">
+	        <img ng-src="{{ brick.src }}" alt="A masonry brick" ng-click="show_image(brick.src,brick.id)">
+	    </div>
+	</div>
 </div>
